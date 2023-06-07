@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+  <div th:insert="Header2.html"></div>
+	<div class="container-fluid">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h4>EditBooks</h4>
+
+			</div>
+			<form action="/updatebook" method="post" th:object="${bookmodel}" >
+				<div class="card-body">
+					<div class="row m-2">
+						<div class="col-4">Bookname</div>
+						<div class="col-6">
+							<input type="text" th:field="*{bname}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Authorname</div>
+						<div class="col-6">
+							<input type="text" th:field="*{aname}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">price</div>
+						<div class="col-6">
+							<input type="number" th:field="*{price}"class="form-control">
+							
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Categories</div>
+						<div class="col-6">
+							 <select th:field="*{category}" class="form-control">
+						     <option value="">--Select--</option>
+						     <option value="state-1">New</option>
+						   </select>
+						</div>
+					</div>
+					
+					
+					
+					<div class="row m-2">
+						<div class="col-4">Upload Photo</div>
+						<div class="col-6">
+							<input type="file" th:field="*{photo}" class="form-control">
+						</div>
+					</div>
+				
+					    	
+					<div class="row m-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Update" class="btn btn-success">
+						</div>
+					</div>
+
+				</div>
+				<input type="hidden" th:field="*{id}">
+			</form>
+		</div>
+
+	</div>
+
+<div th:insert="Footer.html"></div>
+
+</body>
+</html>

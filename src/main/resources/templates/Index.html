@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>MeroKitab</title>
+<style type="text/css">
+  .back-img{
+  background: url("img/book.jpg");
+  height:55vh;
+  width:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+  .crd-ho:hover{
+    background-color: #fcf7f7; 
+ 
+  }
+</style>
+</head>
+<body style="background-color: #f7f7f7;" >
+<div th:insert="Header3.html"></div>
+
+<div class="container-fluid back-img">
+  <h1 class="text-center text-danger mt-4">EBook Management</h1>
+</div>
+ 
+<!--  Start Recent Books -->
+  <div class="container">
+    <h3 class="text-center">Novels</h3> 
+    <div class="row">
+    
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="book/David.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>David McCullough</p>
+            <p>Leonardo</p>   
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $30</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="book/Atomichabit.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>AtomicHabit</p>
+            <p>Pablo Neruda</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $14</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="book/everything.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>Everything Is fucked</p>
+            <p>Ayn Rand</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $20</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="book/Happy.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>Happy Place</p>
+            <p>Lemony Snicket</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $10</a>
+              </div>
+         </div> 
+        </div> 
+      </div>  
+         
+    </div>
+    <div class="text-center mt-2">
+    <a href="login" class="btn btn-danger btn-sm text-white">View All</a>
+    </div>
+  </div>
+<!--  End Recent Books -->
+ <hr>
+<!--  Start New Books -->
+  <div class="container">
+    <h3 class="text-center">MoviesBooks</h3> 
+    <div class="row">
+    
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Movie/dolly.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>Run Rose Run</p>
+            <p>Dolly Parton</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $17</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Movie/grayman.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>The Gray Man</p>
+            <p>Mark Greaney</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $19</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3" >
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Movie/martin.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>Fire & Blood</p>
+            <p>George Martin</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $20</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Movie/otto.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>A Man called Ove</p>
+            <p>Fredrik Backman</p>
+              <div class="p-3 text-center">
+                 <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $23</a>
+              </div>
+         </div> 
+        </div> 
+      </div>  
+         
+    </div>
+    <div class="text-center mt-2">
+   <a href="/login" class="btn btn-danger btn-sm text-white">View All</a>
+    </div>
+  </div>
+<!--  End New Books -->
+  
+  <hr>
+ 
+<!--  Start Old Books -->
+  <div class="container">
+    <h3 class="text-center">ThrillersBooks</h3> 
+    <div class="row">
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Thriller/cjbox.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>Shadows Reel</p>
+            <p>C.J.Box</p>
+              <div class="p-3 text-center">
+              <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $25</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Thriller/darkwater.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>In Dark Water</p>
+            <p>Lynne McEwan</p>
+              <div class="p-3 text-center">
+              <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $15</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+      
+      <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Thriller/father.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>The father</p>
+            <p>John Nicholl</p>
+              <div class="p-3 text-center">
+              <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $26</a>
+              </div>
+         </div> 
+        </div> 
+      </div>  
+           <div class="col-md-3">
+       <div class="card crd-ho">
+        <div class="card-body text-center">
+          <img alt="" src="Thriller/jack.jpg" style="width:150px;height:200px;" class="img-thumblin">
+            <p>The Jack Reacher</p>
+            <p>Lee Child</p>
+              <div class="p-3 text-center">
+              <a href="" class="btn btn-danger btn-sm ml-2 mb-2"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add cart</a>
+                 <a href="" class="btn btn-success btn-sm ml-1 mb-2"> View Details</a>
+                 <a href="" class="btn btn-danger btn-sm ml-1 mb-2"> $25</a>
+              </div>
+         </div> 
+        </div> 
+      </div>
+    </div>
+    <div class="text-center mt-2">
+   <a href="/login" class="btn btn-danger btn-sm text-white mb-2">View All</a>
+    </div>
+  </div>
+<!--  End Old Books -->
+<div th:insert="Footer.html"></div>
+</body>
+</html>

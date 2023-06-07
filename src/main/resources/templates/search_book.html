@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="background-color: #f0f1f2">
+<div th:insert="Header.html"></div>
+<div class="text-center">
+  <h2>Search Result [[${keyword}]] </h2>
+  <br>
+
+</div>
+<div class="container p-3">
+ <div class="row ">
+ <div th:each="s: ${searchResult}">
+ 
+ <div class="col-md-6 text-center p-5 border bg-white">
+ 
+   <p><img alt="" th:src="@{'/image/'+${s.photo}}" style="width:150px;height:200px;" class="img-thumblin"></p>
+   <h4 class="mt-4">Book Name:<span class="text-success">[[${s.bname}]]</span></h4>
+   <h4>Author Name:<span class="text-success">[[${s.aname}]]</span></h4>
+   <h4>Category:<span class="text-success">[[${s.category}]]</span></h4>
+ 
+ </div>
+ 
+  <div th:each="s: ${searchResult}">
+ <div class="col-md-6 text-center p-5 border bg-white">
+  <h2>[[${s.bname}]]</h2>
+  <div class="row p-5">
+   <div class="col-md-4 text-success text-center p-2">
+     <i class="fa-solid fa-money-bill-1-wave fa-3x" style="color: #6788c1;"></i>
+     <p>Cash On Delivery </p>
+   </div>
+   <div class="col-md-4 text-success text-center p-2">
+     <i class="fa-solid fa-rotate-left  fa-3x" style="color: #283593;"></i>
+      <p>Return Available </p>
+   </div>
+   <div class="col-md-4 text-success text-center p-2"> 
+     <i class="fa-solid fa-truck  fa-3x" style="color: #ff5252;"></i>
+      <p>Free Shipping </p>
+   </div>
+  </div>
+  
+  <div class=" text-center p-5">
+    <a href="" class="btn btn-success"><i class="fa-sharp fa-solid fa-cart-plus"></i> Add Cart</a>
+    <a href="" class="btn btn-danger"><i class="fa-solid fa-rupee-sign"></i> [[${s.price}]]</a>
+  
+  </div>
+  </div>
+  </div>
+ </div>
+   
+ </div>
+
+</div>
+
+
+
+<div th:insert="Footer.html"></div>
+</body>
+</html>

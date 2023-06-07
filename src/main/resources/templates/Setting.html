@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Setting</title>
+<style type="text/css">
+  .row{
+    text-decoration: none;
+    color: black;
+  }
+  .row:hover{
+   text-decoration: none;
+   color: rgb(0, 128, 192);
+  }
+
+
+</style>
+</head>
+<body style="background-color: #f7f7f7">
+<div th:insert="Header.html"></div>
+<div class="container">
+<div class="row p-5">
+
+
+    <div class="text-center mb-2">
+		<a th:if="${session.activeuser !=null}">
+		<h1 class="mt-3 text-center">Hello,[[${session.activeuser.fname}]]</h1>
+		</a>
+	 </div>
+	 
+     
+      <div class="col-md-3 mx-5">
+       <div class="card mb-3">
+         <div class="card-body text-center">
+          <a href="/help"> <i class="fa-solid fa-circle-info fa-3x"></i><br> </a>
+           <h4>Help & Support</h4>
+           <h5>Report a problem</h5>
+           --------------
+         </div>
+       </div>
+     </div>
+     
+      <div class="col-md-3 mx-4">
+       <div class="card mb-3">
+         <div class="card-body text-center ">
+          <a href="/sellbook"> <i class="fa-solid fa-book-open fa-3x" style="color: #0f3039;"></i><br></a>
+           <h4>Sell Books</h4>
+           --------------
+         </div>
+       </div>
+     </div>
+     
+   
+    
+	  <div class="col-md-3 mx-4">
+       <div class="card mb-3">
+         <div class="card-body text-center">
+         
+          <a href="/edituser"><i class="fa-solid fa-address-card fa-3x"></i><br></a>
+           
+           <h4>Login And Security(Edit Profile)</h4>
+           --------------
+         </div>
+       </div>
+     </div>
+
+</div>
+</div>
+
+
+
+
+
+<div th:insert="Footer.html"></div>
+</body>
+</html>

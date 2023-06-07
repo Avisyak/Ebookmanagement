@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:insert="Header2.html"></div>
+<div class="container-fluid">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h4>List Of Book</h4>
+                <a href="/excelbook"> <input type="submit" value="DownloadlistOfBooks" class="btn btn-success"></a>
+			</div>
+			<div class="card-body">
+			<table class="table table-striped table-hover">
+			     <thead>
+			        <tr>
+			           <td>Id</td>
+			           <td>Image</td>
+			           <td>Book name</td>
+			           <td>Author</td> 
+			           <td>Price</td>
+			           <td>Categories</td>
+			           
+			           <td>Action</td>
+			           
+			           
+			         </tr>  
+			     
+			     </thead>
+			     <tbody>
+			     <tr th:each ="b: ${blist}">
+			           <td>[[${b.id}]]</td>
+			           <td>
+                    <img th:src="@{/image/__${b.photo}__}" alt="Book Image" width="80px;" height="80px;"/>
+                       </td> 
+			           <td>[[${b.bname}]]</td>  
+			           <td>[[${b.aname}]]</td>  
+			           <td>[[${b.price}]]</td>
+			           <td>[[${b.category}]]</td>
+			           
+			           <td>
+			            <a th:href="@{/editbook(id=${b.id})}">  <button type="submit" class="btn btn-success btn-md btn-block"><i class="fa-solid fa-pen-to-square"></i>Edit</button>
+			            </a>
+			             <a th:href="@{/deletebook(id=${b.id})}"> <button type="submit" class="btn btn-danger btn-md btn-block"><i class="fa-solid fa-trash"></i>delete</button>
+			              </a>
+			           </td>
+			           
+			         </tr>
+			          
+			     </tbody>
+			
+			</table> 
+			
+			
+			
+			</div>
+
+			
+		</div>
+
+	</div>
+<div th:insert="Footer.html"></div>
+</body>
+</html>

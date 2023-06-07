@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+  .row{
+    text-decoration: none;
+    color: black;
+  }
+  .row:hover{
+   text-decoration: none;
+   color: #4fc3f7;
+  }
+
+
+</style>
+</head>
+<body>
+<div th:insert="Header2.html"></div>
+<div class="container">
+  <div class="row p-5">
+      <div class="text-center mb-2">
+				<h4>Welcome:[[${message}]]</h4>
+
+	  </div>
+  
+     <div class="col-md-3 mx-4">
+       <div class="card">
+         <div class="card-body text-center">
+          <a href="/addbook"> <i class="fa-solid fa-square-plus fa-3x" style="color: #00328a;"></i><br></a>
+           <h4>Add Books</h4>
+           --------------
+         </div>
+       </div>
+     </div>
+     
+     
+    
+      <div class="col-md-3 mx-4">
+       <div class="card">
+         <div class="card-body text-center ">
+          <a href="/getAllbook"> <i class="fa-solid fa-book-open fa-3x" style="color: #b80f0f;"></i><br></a>
+           <h4>All Books</h4>
+           --------------
+         </div>
+       </div>
+     </div>
+     
+     
+     
+      <div class="col-md-3 mx-4">
+       <div class="card">
+         <div class="card-body text-center">
+          <a href="/listorder"> <i class="fa-solid fa-box-open fa-3x" style="color: #1e6c19;"></i><br> </a>
+           <h4>Orders</h4>
+           --------------
+         </div>
+       </div>
+     </div>
+    
+     
+  </div>
+</div>
+<div th:insert="Footer.html"></div>
+</body>
+</html>

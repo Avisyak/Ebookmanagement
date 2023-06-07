@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:insert="Header.html"></div>
+<div class="container-fluid">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<h4>Edituserdetails</h4>
+				<p style="color:red">[[${error}]]</p>
+
+			</div>
+			<form action="/updateuser" method="post" th:object="${usermodel}" >
+				<div class="card-body">
+					<div class="row m-2">
+						<div class="col-4">firstname</div>
+						<div class="col-6">
+							<input type="text" th:field="*{fname}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">lastname</div>
+						<div class="col-6">
+							<input type="text" th:field="*{lname}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Address</div>
+						<div class="col-6">
+							<input type="text" th:field="*{address}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Email</div>
+						<div class="col-6">
+							<input type="email" th:field="*{username}"class="form-control">
+						</div>
+					</div>
+					<div class="row m-2">
+						<div class="col-4">Password</div>
+						<div class="col-6">
+							<input type="password" th:field="*{password}"class="form-control">
+						</div>
+					</div>
+					
+					    	
+					<div class="row m-2">
+						<div class="col-4"></div>
+						<div class="col-6">
+							<input type="submit" value="Update" class="btn btn-success">
+						</div>
+					</div>
+
+				</div>
+				<input type="hidden" th:field="*{id}">
+			</form>
+		</div>
+
+	</div>
+<div th:insert="Footer.html"></div>
+</body>
+</html>
